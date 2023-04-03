@@ -528,6 +528,10 @@ margin-right: 5px;
     width: 100%;
     display: block;
 }
+.portfolio .portfolio-item-inner .portfolio-img video{
+    width: 100%;
+    display: block;
+}
 
 .contact-title{
     color: var(--skin-color);

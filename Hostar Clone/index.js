@@ -26,29 +26,30 @@ let movies = [
    }
 ];
 
-const carousel = document.querySelector('.carousel');
+const carousel = document.querySelector(".carousel");
 let sliders = [];
 
 let slideIndex = 0;//track the current slide
 
-const createslide = () => {
+const createSlide = () => {
    if (slideIndex >= movies.length) {
       slideIndex = 0;
    }
 
    // create dom element
-   let slide = document.createElement('div');
-   var imgElement = document.createElement('img');
-   let content = document.createElement('div');
-   let h1 = document.createElement('h1');
-   let p = document.createElement('p');
+   let slide = document.createElement("div");
+   var imgElement = document.createElement("img");
+   let content = document.createElement("div");
+   let h1 = document.createElement("h1");
+   let p = document.createElement("p");
 
    //Attaching All Elements
-   imgElement.appendChild(document.createTextNode(''));
+   imgElement.appendChild(document.createTextNode(""));
    h1.appendChild(document.createTextNode(movies[slideIndex].name));
    p.appendChild(document.createTextNode(movies[slideIndex].des));
    content.appendChild(h1);
    content.appendChild(p);
+   slide.appendChild(content);
    slide.appendChild(imgElement);
    carousel.appendChild(slide);
 
@@ -57,10 +58,10 @@ const createslide = () => {
    slideIndex++;
 
    // setting elements classname
-   slide.className = 'slider';
-   content.className = 'slide-content';
-   h1.className = 'movie-title';
-   p.className = 'movie-des';
+   slide.className = "slider";
+   content.className = "slide-content";
+   h1.className = "movie-title";
+   p.className = "movie-des";
 
    sliders.push(slide);
 
@@ -70,12 +71,12 @@ const createslide = () => {
 };
 
 for (let i=0; i<3; i++) {
-   createslide();
+   createSlide();
 }
 
 setInterval(() => {
-   createslide();
-} , 3000);
+   createSlide();
+},3000);
 
 //video Cards
 const videoCards=[...document.querySelectorAll('.video-card')];
