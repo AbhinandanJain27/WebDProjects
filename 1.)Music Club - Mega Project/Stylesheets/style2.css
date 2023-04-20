@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pacifico&family=Satisfy&display=swap');
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+    background-color: #ac739c;
+}
+.container{
+    border: 2px solid lightgray;
+    background-color: #f2f2f2;
+    width:60vw;
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 1.5em;
+}
+.container h1{
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 2.3em;
+    line-height: 1em;
+    margin-bottom: 1em;
+    text-decoration: underline;
+}
+form{
+    margin: 1em;
+}
+input[type="text"],
+input[type="email"],
+input[type="number"]{
+    padding: 1em;
+    border-bottom: 1px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 50%;
+}
+textarea{
+    width: 90%;
+}
+input[type="submit"],
+input[type="reset"]{
+    background-color: #5693ef;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 6%;
+    color: white;
+    font-weight: 700;
+}
+input[type="submit"]:hover,
+input[type="reset"]:hover{
+    background-color: #0066ff;
+}
+input[type="submit"]:visited,
+input[type="reset"]:visited{
+    background-color: blue;
+}
+form div{
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.5em;
+    font-weight: 900;
+}
