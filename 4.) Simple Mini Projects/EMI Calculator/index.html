@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EMI Calculator</title>
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
-    <h1>EMI Calculator </h1>
+    <h1>EMI Calculator</h1>
+    <div class="theme-toggle">
+        <input type="checkbox" id="themeToggle" />
+        <label for="themeToggle" class="toggle-label">
+            <i id="themeIcon" class="fas fa-sun"></i>
+        </label>
+    </div>
     <div class="container">
         <div class="input">
             <form method="get">
@@ -24,11 +29,11 @@
                 </div>
                 <div>
                     <label for="years">Enter Tenure (Years):</label>
-                    <input type="number" name="years" id="years" placeholder="Enter Years" />
+                    <input type="number" name="years" id="years"  placeholder="Enter Years" />
                 </div>
                 <div>
                     <label for="months">Enter Tenure (Months):</label>
-                    <input type="number" name="months" id="months" placeholder="Enter Months" />
+                    <input type="number" name="months" id="months"placeholder="Enter Months" />
                 </div>
                 <div>
                     <button type="button" onclick="calculateEmi()">Calculate EMI</button>
@@ -36,11 +41,9 @@
             </form>
         </div>
         <div class="output">
-            <div class="results">
-                <!-- Output results will be added here -->
-            </div>
+            <div class="results"></div>
             <div class="visuals">
-                <h4>Break-up of total Payment</h4>
+                <h4>Break-up of Total Payment</h4>
                 <canvas id="pieChart"></canvas>
             </div>
         </div>
@@ -56,14 +59,10 @@
                     <th>Remaining Amount</th>
                 </tr>
             </thead>
-            <tbody>
-                <!-- Rows will be added here -->
-            </tbody>
+            <tbody></tbody>
         </table>
     </div>
-    <!-- To generate PDF of the page with details -->
     <button onclick="window.print()" class="print">Print</button>
     <script src="index.js"></script>
 </body>
-
 </html>

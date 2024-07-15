@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Convertor</title>
+
+  <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="formContainer">
+
+      <form action="#" oninput="convertTemperature(this)">
+
+        <div class="first">
+
+          <input id="degree" type="number" placeholder="Input">
+
+          <select id="convertTo">
+            <option value="farhenite">Farhenite</option>
+            <option value="celcius">Celcius</option>
+          </select>
+
+        </div>
+
+        <div class="third">
+
+          <label for="result"></label>
+          <input id="result" type="text" readonly placeholder="answer"> 
+
+        </div>
+
+        <div class="fourth">
+          <input type="submit" value="Convert">
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <script src="/index.js" defer></script>
+
+</body>
+
+</html>

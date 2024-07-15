@@ -7,13 +7,19 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f0f0f0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
     padding: 20px;
+    background: linear-gradient(to right, #74ebd5, #ACB6E5);
+    transition: background-color 0.5s, color 0.5s;
+}
+
+body.dark {
+    background: linear-gradient(to right, #2c3e50, #4ca1af);
+    color: #fff;
 }
 
 .container {
@@ -24,6 +30,11 @@ body {
     max-width: 700px;
     padding: 20px;
     margin-bottom: 20px;
+    transition: background-color 0.5s;
+}
+
+body.dark .container {
+    background-color: #34495e;
 }
 
 .input {
@@ -63,6 +74,7 @@ body {
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 .input form button:hover {
@@ -71,13 +83,17 @@ body {
 
 .output {
     display: flex;
-    flex-direction: column;
     gap: 20px;
 }
 
 .results {
     flex: 1;
     margin-bottom: 20px;
+    justify-content: center;
+    text-align: center;
+    margin: auto 0;
+    font-style: italic;
+    font-weight: bold;
 }
 
 .visuals {
@@ -103,6 +119,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    max-width: 700px;
 }
 
 table {
@@ -128,7 +145,64 @@ table th {
 table td {
     background-color: #fff;
 }
-.print{
+
+body.dark table th {
+    background-color: #4a4a4a;
+    color: #fff;
+}
+
+body.dark table td {
+    background-color: #555;
+    color: #fff;
+}
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#themeToggle {
+    display: none;
+    /* Hide the default checkbox */
+}
+
+.toggle-label {
+    width: 60px;
+    height: 30px;
+    background: #ccc;
+    border-radius: 30px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.toggle-label i {
+    font-size: 25px; /* Adjust size as needed */
+    transition: color 0.3s;
+    overflow: visible;
+}
+
+.toggle-label::after {
+    content: "";
+    width: 26px;
+    height: 26px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 1px;
+    top: 2px;
+    transition: transform 0.3s;
+}
+
+#themeToggle:checked+.toggle-label {
+    background: #007bff;
+}
+
+#themeToggle:checked+.toggle-label::after {
+    transform: translateX(30px);
+}
+
+.print {
     margin: 2% 0;
     padding: 10px 20px;
     background-color: #007bff;
@@ -154,14 +228,15 @@ table td {
 
     #pieChart {
         max-width: 100%;
-        max-height: 100%;
+        max-height: 250px;
     }
 
     .table {
         padding: 10px;
     }
 
-    table th, table td {
+    table th,
+    table td {
         padding: 8px;
         font-size: 14px;
     }
@@ -175,11 +250,6 @@ table td {
 
     .input form {
         gap: 5px;
-    }
-
-    .input form div {
-        flex-direction: column;
-        align-items: flex-start;
     }
 
     .input form button {
@@ -196,7 +266,8 @@ table td {
         padding: 5px;
     }
 
-    table th, table td {
+    table th,
+    table td {
         padding: 6px;
         font-size: 12px;
     }

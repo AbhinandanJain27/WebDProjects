@@ -1,0 +1,57 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  min-height: 100vh;
+  
+  background-color: rgb(238, 238, 238);
+}
+
+.formContainer{
+  width: 25%;
+  padding: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.295);
+
+  background-color: rgb(255, 255, 255);
+}
+
+input{
+  padding: 4%;
+  margin: 3% 1%;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.295);
+}
+
+select{
+  padding: 4%;
+  margin: 1%;
+  width: 45%;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.295);
+}
+
+.first input:first-child{
+  width: 47%;
+} 
+
+.third input{
+  width: 100%;
+}
+
+input[type = "submit"]{
+  width: 100%;
+}
